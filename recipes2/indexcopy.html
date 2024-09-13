@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="recetas" content="recetas, comida">
+    <title>Recipes</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link rel="icon" href="images/chef.png">
+    <script src="javascript.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>BARTOLO</h1>
+        <h2>recipes</h2>
+    </header>
+    <nav class="tru">
+        <a href="indexcopy.html">ingredientes</a>
+        <a href="ingredientescopy.html">recetas</a>
+        <a href="recetascopy.html">detalles-y-mas</a>
+    </nav>
+    <main>
+        <section class="redimensionar">
+            <img src="images/arroz con pollo.avif" alt="arroz con pollo">
+            <img src="images/cerdo con pure.avif" alt="cerdo con pure">
+            <img src="images/ensalada con maiscos.avif" alt="ensalada con mariscos">
+        </section>
+        <section id="2">
+            <div>
+                <ul id="listaingrediente"></ul>
+            </div>
+        </section>
+    </main>
+    <main>
+        <section>
+            <form class="form">
+                <input type="text" id="ingrediente" name="ingrediente" placeholder="ingredientes" aria-label="agregar">
+                <button type="button" class="boton" onclick="agregaringrediente(document.getElementById('ingrediente').value)">
+                    <img src="images/lupa.png" alt="lupa" class="lupa">
+                </button>
+            </form>
+            <form class="filtros-form">
+                <label>
+                    <input type="checkbox" id="vegano"> Vegano
+                </label>
+                <label>
+                    <input type="checkbox" id="vegetariano"> Vegetariano
+                </label>
+                <button type="button" class="botonfiltro" onclick="filtrarRecetas()">Filtrar</button>
+            </form>
+            <button type="button" class="botongenerar" onclick="generarRecetas()">Generar</button>
+        </section>
+    </main>
+    <section id="recetas-lista">
+        <h3>Recetas</h3>
+        <ul id="recetas">
+            <li class="receta" data-type="vegano" data-ingredients="quinoa, espinacas">
+                Ensalada de Quinoa
+            </li>
+            <li class="receta" data-type="vegetariano" data-ingredients="frijoles, tortillas">
+                Tacos de Frijoles
+            </li>
+            <li class="receta" data-type="vegano" data-ingredients="espinacas, plátano">
+                Smoothie de Espinacas
+            </li>
+            <li class="receta" data-type="vegetariano" data-ingredients="tomate, queso, masa">
+                Pizza Vegetariana
+            </li>
+            <li class="receta" data-ingredients="carne, ">
+                empanadas
+            </li>
+        </ul>
+    </section>
+    
+
+</body>
+</html>
